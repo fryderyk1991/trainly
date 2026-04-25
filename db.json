@@ -1,3 +1,14 @@
 {
-  
+  "trainers": [
+    {
+      "id": 1,
+      "name": "Adam Nowak",
+      "specialization": "strength"
+    },
+    {
+      "id": 1,
+      "name": "Adam Nowak",
+      "specialization": "strength"
+    }
+  ]
 }
