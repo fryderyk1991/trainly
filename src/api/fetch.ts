@@ -5,6 +5,5 @@ export const fetchData = async <T>(url: string): Promise<T> => {
   if (!res.ok) {
     throw new Error("API ERROR");
   }
-
   return res.json();
 };
