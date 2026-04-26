@@ -1,15 +1,22 @@
-// import { useState } from 'react'
+import { useState, useEffect } from "react";
 
-import './App.css'
+type Trainer = {
+  id: number;
+  name: "string";
+  specialization: "string";
+  experience: number;
+};
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [trainersList, setTrainersList] = useState<Trainer[]>([]);
 
-  return (
-    <>
-     <h1 className="text-3xl">{count}</h1>  
-    </>
-  )
+
+
+  useEffect(() => {
+   
+  }, []);
+
+  return <></>;
 }
 
-export default App
+export default App;

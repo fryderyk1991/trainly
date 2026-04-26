@@ -2,13 +2,27 @@
   "trainers": [
     {
       "id": 1,
-      "name": "Adam Nowak",
-      "specialization": "strength"
+      "name": "Adam Kowalski",
+      "specialization": "Strength & Conditioning",
+      "experience": 8
     },
     {
-      "id": 1,
-      "name": "Adam Nowak",
-      "specialization": "strength"
+      "id": 2,
+      "name": "Marta Nowak",
+      "specialization": "Yoga & Mobility",
+      "experience": 5
+    },
+    {
+      "id": 3,
+      "name": "Piotr Zieliński",
+      "specialization": "Weight Loss",
+      "experience": 6
+    },
+    {
+      "id": 4,
+      "name": "Kasia Wójcik",
+      "specialization": "Functional Training",
+      "experience": 4
     }
   ]
 }
