@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { fetchData } from "./api/fetch";
+
 
 type Trainer = {
   id: number;
@@ -10,10 +11,12 @@ type Trainer = {
 
 function App() {
   const [trainersList, setTrainersList] = useState<Trainer[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    const loadTrainers = async () => {
+
+  const loadTrainers = async () => {
+ 
+ 
       try {
         const data = await fetchData<Trainer[]>(
           "http://localhost:3000/trainers",
@@ -22,34 +25,23 @@ function App() {
       } catch (error) {
         console.error(error);
       } finally {
-        setIsLoading(false);
+       setIsLoading(false);
       }
     };
 
-    const timeout = setTimeout(() => {
-        loadTrainers();
-    }, 2000)
-
-  return () => clearTimeout(timeout);
-
-  }, []);
 
   return (
     <>
-      {" "}
-      {isLoading ? (
-        <h1>Loading...</h1>
-      ) : (
+    <button onClick={loadTrainers} disabled={isLoading}>{isLoading ? 'Loading...' : 'Trainers'}</button>
         <ul className="my-2">
           {trainersList.map((t) => (
-            <li className="my-1" key={t.id}>
+            <li className="my-2" key={t.id}>
               Name: {t.name}
               <p>Specialization: {t.specialization}</p>
               <p>Experience: {t.experience}</p>
             </li>
           ))}
         </ul>
-      )}
     </>
   );
 }
