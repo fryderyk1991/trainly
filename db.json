@@ -4,25 +4,29 @@
       "id": 1,
       "name": "Adam Kowalski",
       "specialization": "Strength & Conditioning",
-      "experience": 8
+      "experience": 8,
+      "stars" : 6
     },
     {
       "id": 2,
       "name": "Marta Nowak",
       "specialization": "Yoga & Mobility",
-      "experience": 5
+      "experience": 5,
+      "stars" : 4.5
     },
     {
       "id": 3,
       "name": "Piotr Zieliński",
       "specialization": "Weight Loss",
-      "experience": 6
+      "experience": 6,
+      "stars" : 3
     },
     {
       "id": 4,
       "name": "Kasia Wójcik",
       "specialization": "Functional Training",
-      "experience": 4
+      "experience": 4,
+      "stars" : 2
     }
   ]
 }
