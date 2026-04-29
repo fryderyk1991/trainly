@@ -14,19 +14,18 @@ type Props = {
 
 const TrainerTable = ({ trainers }: Props) => {
   return (
-   <Table>
-    <TableHeader>
+   <Table className="text-white ">
+    <TableHeader className="bg-slate-800">
         <TableRow>
-            <TableHead>Name</TableHead>
-            <TableHead>Specialization</TableHead>
-            <TableHead>Rate/Stars</TableHead>
-            <TableHead>Experience</TableHead>
+            <TableHead className="text-white">Name</TableHead>
+            <TableHead className="text-white">Specialization</TableHead>
+            <TableHead className="text-white">Rate/Stars</TableHead>
+            <TableHead className="text-white">Experience</TableHead>
         </TableRow>
          </TableHeader>
         <TableBody>
             {trainers.map((trainer) => (
-                console.log(trainer.name),
-                <TableRow key={trainer.id}>
+                <TableRow key={trainer.id} onClick={() => {console.log(trainer.id)}}>
                     <TableCell>{trainer.name}</TableCell>
                     <TableCell>{trainer.specialization}</TableCell>
                     <TableCell>{trainer.stars}</TableCell>
