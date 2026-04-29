@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchData } from "./api/fetch";
 import Container from "./components/layout/Container";
 import type { Trainer } from "./types/trainer";
+import TrainerTable from "./components/TrainerTable";
 
 
 
@@ -26,17 +27,9 @@ function App() {
 
   return (
     <>
-      <div className="bg-teal-950">
+      <div className="bg-slate-900">
         <Container>
-           <ul className="my-2">
-          {trainersList.map((t) => (
-            <li className="my-2" key={t.id}>
-              Name: {t.name}
-              <p>Specialization: {t.specialization}</p>
-              <p>Experience: {t.experience}</p>
-            </li>
-          ))}
-        </ul>
+        <TrainerTable trainers={trainersList} />
         </Container>
       </div>
     </>
