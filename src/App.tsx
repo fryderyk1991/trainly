@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-slate-900">
+      <div className="min-h-screen bg-gradient-to-r from-slate-400 to-slate-500">
         <Container>
         <TrainerTable trainers={trainersList} />
         </Container>
