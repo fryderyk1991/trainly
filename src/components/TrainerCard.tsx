@@ -2,10 +2,12 @@ import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardAction } 
 import type { Trainer } from "../types/trainer";
 
 type Props = {
-  trainers: Trainer[];
+  trainers: Trainer[];  
+  setUser: () => void;
+
 };
 
-const TrainerCard = ({ trainers }: Props) => {
+const TrainerCard = ({ trainers, setUser }: Props, ) => {
   return (
     <>
       {trainers.map((t) => (
@@ -18,7 +20,7 @@ const TrainerCard = ({ trainers }: Props) => {
           />
           <CardHeader>
         <CardAction>
-          <span >Featured</span>
+          <button onClick={() => setUser()}>Join me</button>
         </CardAction>
         <CardTitle>Design systems meetup</CardTitle>
         <CardDescription>

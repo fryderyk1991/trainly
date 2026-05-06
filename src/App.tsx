@@ -9,6 +9,12 @@ import TrainerCard from "./components/TrainerCard";
 
 function App() {
   const [trainersList, setTrainersList] = useState<Trainer[]>([]);
+  const [isUserAuth, setIsUserAuth] = useState(false)
+
+  const logUser = () :void => {
+    setIsUserAuth(prev => !prev);
+    console.log(isUserAuth);
+  }
 
   useEffect(() => {
     const loadTrainers = async () => {
@@ -28,10 +34,10 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-r from-slate-400 to-slate-500">
+      <div className="min-h-screen from-slate-400 to-slate-500">
         <Container>
         <TrainerTable trainers={trainersList} />
-        <TrainerCard trainers={trainersList}/>
+        <TrainerCard trainers={trainersList} setUser={logUser}/>
         </Container>
       </div>
     </>
