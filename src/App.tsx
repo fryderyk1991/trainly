@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen from-slate-400 to-slate-500">
+      <div className="min-h-screen bg-gradient-to-r from-slate-900 to-slate-800">
         <Container>
         <TrainerTable trainers={trainersList} />
         <TrainerCard trainers={trainersList} setUser={logUser}/>
