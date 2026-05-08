@@ -9,10 +9,10 @@ import TrainerCard from "./components/TrainerCard";
 
 function App() {
   const [trainersList, setTrainersList] = useState<Trainer[]>([]);
-  const [isUserAuth, setIsUserAuth] = useState(false)
+  const [isUserAuth, setIsUserAuth] =  useState<string | null>(null)
 
-  const logUser = () :void => {
-    setIsUserAuth(prev => !prev);
+  const logUser = (name: string) :void => {
+    setIsUserAuth(name);
     console.log(isUserAuth);
   }
 

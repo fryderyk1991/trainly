@@ -3,7 +3,7 @@ import type { Trainer } from "../types/trainer";
 
 type Props = {
   trainers: Trainer[];  
-  setUser: () => void;
+  setUser: (name: string) => void;
 
 };
 
@@ -20,7 +20,7 @@ const TrainerCard = ({ trainers, setUser }: Props, ) => {
           />
           <CardHeader>
         <CardAction>
-          <button onClick={() => setUser()}>Join me</button>
+          <button onClick={() => setUser("Login")}>Join me</button>
         </CardAction>
         <CardTitle>Design systems meetup</CardTitle>
         <CardDescription>
